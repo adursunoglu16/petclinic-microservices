@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   config-server:
     image: "${IMAGE_TAG_CONFIG_SERVER}"
@@ -6,6 +7,7 @@ services:
       - clarusnet
     ports:
       - 8888:8888
+
   discovery-server:
     image: "${IMAGE_TAG_DISCOVERY_SERVER}"
     depends_on:
@@ -15,6 +17,7 @@ services:
       - clarusnet
     ports:
       - 8761:8761
+
   customers-service:
     image: "${IMAGE_TAG_CUSTOMERS_SERVICE}"
     deploy:
@@ -31,6 +34,7 @@ services:
       - clarusnet
     ports:
       - 8081:8081
+
   visits-service:
     image: "${IMAGE_TAG_VISITS_SERVICE}"
     deploy:
@@ -47,6 +51,7 @@ services:
       - clarusnet
     ports:
       - 8082:8082
+
   vets-service:
     image: "${IMAGE_TAG_VETS_SERVICE}"
     deploy:
@@ -63,6 +68,7 @@ services:
       - clarusnet
     ports:
       - 8083:8083
+
   api-gateway:
     image: "${IMAGE_TAG_API_GATEWAY}"
     deploy:
@@ -79,6 +85,7 @@ services:
       - clarusnet
     ports:
       - 8080:8080
+
   tracing-server:
     image: openzipkin/zipkin
     environment:
@@ -87,6 +94,7 @@ services:
       - clarusnet
     ports:
       - 9411:9411
+
   admin-server:
     image: "${IMAGE_TAG_ADMIN_SERVER}"
     depends_on:
@@ -97,6 +105,7 @@ services:
       - clarusnet
     ports:
       - 9090:9090
+
   hystrix-dashboard:
     image: "${IMAGE_TAG_HYSTRIX_DASHBOARD}"
     depends_on:
@@ -107,28 +116,33 @@ services:
       - clarusnet
     ports:
       - 7979:7979
+
   ## Grafana / Prometheus
+
   grafana-server:
     image: "${IMAGE_TAG_GRAFANA_SERVICE}"
     networks:
       - clarusnet
     ports:
       - 3000:3000
+
   prometheus-server:
     image: "${IMAGE_TAG_PROMETHEUS_SERVICE}"
     networks:
       - clarusnet
     ports:
       - 9091:9090
+    
   mysql-server:
     image: mysql:5.7.8
-    environment:
+    environment: 
       MYSQL_ROOT_PASSWORD: petclinic
       MYSQL_DATABASE: petclinic
     networks:
       - clarusnet
     ports:
       - 3306:3306
+
 networks:
   clarusnet:
     driver: overlay

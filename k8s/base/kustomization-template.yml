@@ -18,7 +18,7 @@ resources:
 - discovery-server-service.yaml
 - grafana-server-service.yaml
 - hystrix-dashboard-service.yaml
-- mysql-server-service.yaml
+#- mysql-server-service.yaml
 - prometheus-server-service.yaml
 - tracing-server-service.yaml
 - vets-service-service.yaml

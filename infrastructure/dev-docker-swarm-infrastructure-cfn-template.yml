@@ -80,7 +80,7 @@ Resources:
           Arn: !GetAtt EC2Profile.Arn
         SecurityGroupIds:
           - !GetAtt DockerMachinesSecurityGroup.GroupId
-        TagSpecifications: 
+        TagSpecifications:  # ansible dynamic inv icin lazim bu tagler cunku cfn ile sadece 5 ec2 kuruyoz ama swarmu ansible ile kurcaz
           - ResourceType: instance
             Tags: 
               - Key: app-stack-name

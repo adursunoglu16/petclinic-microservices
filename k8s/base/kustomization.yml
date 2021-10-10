@@ -27,22 +27,22 @@ resources:
 
 images:
 - name: IMAGE_TAG_CONFIG_SERVER
-  newName: ""
+  newName: "testing-image-1"
 - name: IMAGE_TAG_DISCOVERY_SERVER
-  newName: ""
+  newName: "testing-image-2"
 - name: IMAGE_TAG_CUSTOMERS_SERVICE
-  newName: ""
+  newName: "testing-image-3"
 - name: IMAGE_TAG_VISITS_SERVICE
-  newName: ""
+  newName: "testing-image-4"
 - name: IMAGE_TAG_VETS_SERVICE
-  newName: ""
+  newName: "testing-image-5"
 - name: IMAGE_TAG_API_GATEWAY
-  newName: ""
+  newName: "testing-image-6"
 - name: IMAGE_TAG_ADMIN_SERVER
-  newName: ""
+  newName: "testing-image-7"
 - name: IMAGE_TAG_HYSTRIX_DASHBOARD
-  newName: ""
+  newName: "testing-image-8"
 - name: IMAGE_TAG_GRAFANA_SERVICE
-  newName: ""
+  newName: "testing-image-9"
 - name: IMAGE_TAG_PROMETHEUS_SERVICE
-  newName: ""
+  newName: "testing-image-10"

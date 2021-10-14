@@ -1,6 +1,6 @@
 nodes:
-  - address: 3.81.26.226
-    internal_address: 172.31.68.170
+  - address: 3.92.32.160      
+    internal_address: 172.31.17.227
     user: ubuntu
     role: [controlplane, worker, etcd]
 
@@ -10,7 +10,7 @@ services:
     creation: 6h
     retention: 24h
 
-ssh_key_path: ~/.ssh/pablo-rancher.key
+ssh_key_path: ~/.ssh/abdullah-rancher.key
 
 # Required for external TLS termination with
 # ingress-nginx v0.22+
